@@ -1,0 +1,101 @@
+*, html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e0d4ff;
+}
+
+h1 {
+    font-family: "Lexend", sans-serif;
+    padding-top: 50px;
+}
+
+#inCss {
+    background-color: #987D9A;
+    border-radius: 5px;
+    color: white;
+}
+
+p {
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container {
+    background-color: #e0d4ff;
+    min-height: 100vh;
+    padding-bottom: 20px;
+}
+
+.animation-text {
+    margin: 0;
+    padding: 0;
+}
+
+.timing-function {
+    background-color: white;
+    margin-top: 0;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.car {
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    animation: move 2s forwards;
+}
+
+.linear .car {
+    animation-timing-function: linear;
+    background-image: url('images/racing-car.png');
+}
+
+.ease .car {
+    animation-timing-function: ease;
+    background-image: url('images/racing-car (2).png');
+}
+
+.ease-in .car {
+    animation-timing-function: ease-in;
+    background-image: url('images/racing-car (3).png');
+}
+
+.ease-out .car {
+    animation-timing-function: ease-out;
+    background-image: url('images/racing-car (4).png');
+}
+
+.ease-in-out .car {
+    animation-timing-function: ease-in-out;
+    background-image: url('images/racing-car (5).png');
+}
+
+.cubic-bezier .car {
+    animation-timing-function: cubic-bezier(1, 0, 0, 1);
+    background-image: url('images/racing-car (6).png');
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(var(--animation-width) - 40px));
+    }
+}
+
+@keyframes move-back {
+    0% {
+        transform: translateX(calc(var(--animation-width) - 40px));
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
